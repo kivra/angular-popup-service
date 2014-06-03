@@ -1,5 +1,5 @@
-angular-popup
-=============
+angular-popup-service
+=====================
 
 Library for handling popup boxes in angular
 
@@ -9,7 +9,7 @@ For non [mobile devices](http://stackoverflow.com/questions/3514784/what-is-the-
 ## Installation
 Install with [Bower](http://bower.io/):
 
-    $ bower install angular-popup
+    $ bower install angular-popup-service
 
 ## Usage
 `index.html`
