@@ -1,0 +1,20 @@
+<div class="ng-popup"
+  ng-controller="ngPopupCtrl"
+  ng-show="popup">
+  <div class="ng-popup-box">
+    <h4 class="ng-popup-message">{{ popup.message }}</h4>
+    <form ng-submit="ok(popup.value)">
+      <div ng-show="popup.type === 'prompt'">
+        <input type="text"
+          id="ngPopupValue"
+          ng-model="popup.value">
+      </div>
+      <p>
+        <button type="button"
+          ng-show="popup.type === 'confirm' || popup.type === 'prompt'"
+          ng-click="cancel()">Cancel</button>
+        <button type="submit">OK</button>
+      </p>
+    </form>
+  </div>
+</div>

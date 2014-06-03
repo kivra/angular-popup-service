@@ -1,0 +1,54 @@
+/* ngPopup */
+
+@keyframes ng-popup-box {
+  from {
+    transform: scale3d(1.2,1.2,1);
+  }
+  to {
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes ng-popup-background {
+  from {
+    display: block !important;
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.ng-popup {
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.3);
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: ng-popup-background 200ms;
+  animation-timing-function: cublic-bezier(.25,.1,.25,1);
+}
+.ng-popup > * {
+    text-align: initial;
+}
+
+.ng-popup-box {
+  cursor: auto;
+  position: relative;
+  animation: ng-popup-box 200ms;
+  animation-timing-function: cublic-bezier(.25,.1,.25,1);
+}
+
+.ng-popup-message {
+  white-space: pre-wrap;
+}
